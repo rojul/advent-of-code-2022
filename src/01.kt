@@ -1,5 +1,5 @@
 fun main() {
-    val elfs = object {}.javaClass.getResource("/01.txt")!!.readText().trim('\n')
+    val elfs = readInput(1)
         .split("\n\n")
         .map { it.split("\n").map { it.toInt() } }
     println(elfs.maxOf { it.sum() })

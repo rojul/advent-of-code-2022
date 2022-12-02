@@ -1,5 +1,5 @@
 fun main() {
-    val rounds = object {}.javaClass.getResource("/02.txt")!!.readText().trim('\n')
+    val rounds = readInput(2)
         .split("\n")
         .map {
             val shapes = it.mapNotNull { Shape.from(it) }
